@@ -1,34 +1,6 @@
-
----
-
-## 🚀 5️⃣ GitHub → Render Auto Deploy
-
-Render এ:
-- **New Web Service**
-- Source: GitHub
-- Repo select করুন
-- Root directory: `api`
-- Start: `gunicorn app:app`
-
-👉 GitHub push = auto redeploy 🎉
-
----
-
-## ⚠️ Security checklist (don’t skip)
-✅ Bot token = ENV only  
-✅ Repo public হলে rate limit যোগ করুন  
-✅ API endpoint abuse protection দিন  
-✅ Private bot হলে safest  
-
----
-
-## 🔥 Next level (optional)
-আমি চাইলে:
-- ✅ Repo **clean করে সাজিয়ে** দিতে পারি  
-- ✅ **Dockerfile** যোগ করে দিতে পারি  
-- ✅ GitHub Actions (CI/CD) সেট করে দিতে পারি  
-- ✅ README professional করে দিতে পারি  
-
-বলুন **sakib sir**,  
-👉 **Repo public রাখবেন নাকি private?**  
-👉 **Bot + API এক repo, নাকি আলাদা repo চান?**
+services:
+  - type: web
+    name: spotify-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
