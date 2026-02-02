@@ -1,0 +1,6 @@
+Flask
+cloudscraper
+requests
+brotli
+zstandard
+gunicorn
